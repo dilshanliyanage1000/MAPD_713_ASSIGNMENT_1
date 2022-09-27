@@ -1,0 +1,24 @@
+{
+  "name": "mapd_713_w3",
+  "version": "1.0.0",
+  "description": "MAPD_713_ASSIGNMENT_1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilshanliyanage1000/MAPD_713_ASSIGNMENT_1.git"
+  },
+  "author": "Dilshan Liyanage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilshanliyanage1000/MAPD_713_ASSIGNMENT_1/issues"
+  },
+  "homepage": "https://github.com/dilshanliyanage1000/MAPD_713_ASSIGNMENT_1#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "seneca": "^3.29.0"
+  }
+}
