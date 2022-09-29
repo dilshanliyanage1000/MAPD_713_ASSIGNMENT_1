@@ -30,9 +30,14 @@ var seneca = require("seneca")();
 seneca.use(plugin);
 seneca.use('seneca-entity');
 
+var postCounter = 0;
+var getCounter = 0;
+
 //Add product : POST request
 
 seneca.add('role:api, cmd:add-product', function (args, done) {
+
+    console.log("> products POST : (cmd:add-product)");
 
     var product =  {
         product_name: args.product_name,
@@ -57,6 +62,8 @@ seneca.add('role:api, cmd:add-product', function (args, done) {
 
 seneca.add('role:api, cmd:get-all-products', function (args, done) {
 
+    console.log("> products GET : (cmd:get-all-product)");
+
     seneca.act({ role: 'product', cmd: 'get-all' }, function (err, msg) {
         console.log(msg);
         done(err, msg);
@@ -71,6 +78,8 @@ seneca.add('role:api, cmd:get-all-products', function (args, done) {
 
 seneca.add('role:api, cmd:get-product', function (args, done) {
 
+    console.log("> products GET : (cmd:get-product) -> Product ID : " + args.product_id);
+
     seneca.act({ role: 'product', cmd: 'get', data: { product_id: args.product_id } }, function (err, msg) {
         console.log(msg);
         done(err, msg);
@@ -84,6 +93,8 @@ seneca.add('role:api, cmd:get-product', function (args, done) {
 //Delete product : POST Request
 
 seneca.add('role:api, cmd:delete-product', function (args, done) {
+
+    console.log("> products POST : (cmd:delete-product) -> Product ID : " + args.product_id);
 
     seneca.act({ role: 'product', cmd: 'delete', data: { product_id: args.product_id } }, function (err, msg) {
         console.log(msg);
