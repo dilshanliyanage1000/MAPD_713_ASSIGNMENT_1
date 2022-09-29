@@ -1,24 +1,21 @@
 {
-  "name": "mapd_713_w3",
+  "name": "lab03",
   "version": "1.0.0",
-  "description": "MAPD_713_ASSIGNMENT_1",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "grunt validate --verbose",
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dilshanliyanage1000/MAPD_713_ASSIGNMENT_1.git"
-  },
-  "author": "Dilshan Liyanage",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dilshanliyanage1000/MAPD_713_ASSIGNMENT_1/issues"
-  },
-  "homepage": "https://github.com/dilshanliyanage1000/MAPD_713_ASSIGNMENT_1#readme",
   "dependencies": {
-    "express": "^4.18.1",
-    "seneca": "^3.29.0"
+    "body-parser": "^1.14.1",
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "seneca": "2.0.0",
+    "seneca-entity": "^1.3.0",
+    "seneca-mongo-store": "^0.2.0",
+    "type-is": "^1.6.10"
   }
 }
